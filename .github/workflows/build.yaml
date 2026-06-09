@@ -32,7 +32,8 @@ jobs:
 
       - name: Generate XML and Pages
         run: |
-          haxe docsGenerator.hxml
+          generateXML
+          generatePages
 
       - name: Upload Pages Artifact
         uses: actions/upload-pages-artifact@v3

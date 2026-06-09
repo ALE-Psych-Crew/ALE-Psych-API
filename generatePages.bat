@@ -1,0 +1,1 @@
+haxelib run dox -i ALE-Psych/docs.xml -o docs
