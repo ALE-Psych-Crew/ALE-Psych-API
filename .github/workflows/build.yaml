@@ -20,8 +20,8 @@ jobs:
       - name: Clone ALE Psych
         run: |
           git clone https://github.com/ALE-Psych-Crew/ALE-Psych
-          git checkout main
           cd ALE-Psych
+          git checkout main
 
       - name: Install haxelibs
         run: |
