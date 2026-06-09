@@ -32,8 +32,8 @@ jobs:
 
       - name: Generate XML and Pages
         run: |
-          generateXML
-          generatePages
+          generateXML.bat
+          generatePages.bat
 
       - name: Upload Pages Artifact
         uses: actions/upload-pages-artifact@v3
