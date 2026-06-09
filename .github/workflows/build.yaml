@@ -30,10 +30,14 @@ jobs:
           haxelib --global run hmm install
           haxelib --global install dox
 
-      - name: Generate XML and Pages
+      - name: Generate XML
+        working-directory: ALE-Psych
         run: |
-          generateXML.bat
-          generatePages.bat
+          haxe docsGenerator.hxml
+
+      - name: Generate Pages
+        run: |
+          haxelib run dox -i ALE-Psych/docs.xml -o docs
 
       - name: Upload Pages Artifact
         uses: actions/upload-pages-artifact@v3
