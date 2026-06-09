@@ -29,14 +29,13 @@ jobs:
           haxelib --global git hmm https://github.com/ALE-Psych-Crew/hmm
           haxelib --global run hmm setup
           haxelib --global run hmm install
+          haxelib --global install dox
 
       - name: Generate XML
         working-directory: ALE-Psych
         run: |
-          haxelib --global install dox
           haxe docsGenerator.hxml
 
       - name: Generate Pages
         run: |
-          haxelib run dox -i ALE-Psych/docs.xml -o pages
-        
+          haxelib run dox -i ALE-Psych/docs.xml -o docs
