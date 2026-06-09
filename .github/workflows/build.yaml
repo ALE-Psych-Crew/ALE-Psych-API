@@ -30,6 +30,10 @@ jobs:
           haxelib --global run hmm install
           haxelib --global install dox
 
+      - name: Clone XML Generator
+        run: |
+          copy docsGenerator.hxml ALE-Psych/docsGenerator.hxml
+
       - name: Generate XML
         working-directory: ALE-Psych
         run: |
