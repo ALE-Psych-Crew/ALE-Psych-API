@@ -32,7 +32,7 @@ jobs:
 
       - name: Generate XML
         run: |
-          haxe ../docsGenerator.hxml
+          haxe docsGenerator.hxml
           cd ..
 
       - name: Generate Pages
