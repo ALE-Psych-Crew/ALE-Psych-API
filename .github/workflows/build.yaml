@@ -1,0 +1,41 @@
+name: Build
+
+on:
+  push:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Pull the New Commit
+        uses: actions/checkout@v4.1.7
+
+      - name: Setup Haxe
+        uses: krdlab/setup-haxe@master
+        with:
+          haxe-version: 4.3.7
+
+      - name: Clone ALE Psych
+        run: |
+          git clone https://github.com/ALE-Psych-Crew/ALE-Psych
+          git checkout main
+          cd ALE-Psych
+
+      - name: Install haxelibs
+        run: |
+          haxelib --global git hmm https://github.com/ALE-Psych-Crew/hmm
+          haxelib --global run hmm setup
+          haxelib --global run hmm install
+          haxelib --global install dox
+
+      - name: Generate XML
+        run: |
+          haxe ../docsGenerator.hxml
+          cd ..
+
+      - name: Generate Pages
+        run: |
+          haxelib run dox -i ALE-Psych/docs.xml -o pages
+        
