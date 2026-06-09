@@ -24,16 +24,17 @@ jobs:
           git checkout main
 
       - name: Install haxelibs
+        working-directory: ALE-Psych
         run: |
           haxelib --global git hmm https://github.com/ALE-Psych-Crew/hmm
           haxelib --global run hmm setup
           haxelib --global run hmm install
-          haxelib --global install dox
 
       - name: Generate XML
+        working-directory: ALE-Psych
         run: |
+          haxelib --global install dox
           haxe docsGenerator.hxml
-          cd ..
 
       - name: Generate Pages
         run: |
