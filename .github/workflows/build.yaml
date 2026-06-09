@@ -22,12 +22,6 @@ jobs:
         with:
           haxe-version: 4.3.7
 
-      - name: Clone ALE Psych
-        run: |
-          git clone https://github.com/ALE-Psych-Crew/ALE-Psych
-          cd ALE-Psych
-          git checkout main
-
       - name: Install haxelibs
         working-directory: ALE-Psych
         run: |
@@ -36,14 +30,9 @@ jobs:
           haxelib --global run hmm install
           haxelib --global install dox
 
-      - name: Generate XML
-        working-directory: ALE-Psych
+      - name: Generate XML and Pages
         run: |
           haxe docsGenerator.hxml
-
-      - name: Generate Pages
-        run: |
-          haxelib run dox -i ALE-Psych/docs.xml -o docs
 
       - name: Upload Pages Artifact
         uses: actions/upload-pages-artifact@v3

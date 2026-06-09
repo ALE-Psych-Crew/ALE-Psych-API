@@ -1,0 +1,4 @@
+[submodule "ALE-Psych"]
+	path = ALE-Psych
+	url = https://github.com/ALE-Psych-Crew/ALE-Psych
+	branch = main
