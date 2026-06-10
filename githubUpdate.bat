@@ -6,6 +6,8 @@ echo Add all changes to git
 
 git add .
 
+git rm -r --cached ALE-Psych
+
 set /p commitMessage=Enter commit name: 
 
 echo Running git commit with the provided name...
