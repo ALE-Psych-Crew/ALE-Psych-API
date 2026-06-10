@@ -27,7 +27,6 @@ jobs:
         run: |
           haxelib --global git hmm https://github.com/ALE-Psych-Crew/hmm
           haxelib --global run hmm setup
-          tree /f
           haxelib --global run hmm install
           haxelib --global install dox
 
