@@ -38,12 +38,12 @@ jobs:
 
       - name: Clone XML Generator
         run: |
-          copy docsGenerator.hxml ALE-Psych/docsGenerator.hxml
+          copy xmlGenerator.hxml ALE-Psych/xmlGenerator.hxml
 
       - name: Generate XML
         working-directory: ALE-Psych
         run: |
-          haxe docsGenerator.hxml
+          haxe xmlGenerator.hxml
 
       - name: Generate Pages
         run: |

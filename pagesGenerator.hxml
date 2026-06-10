@@ -1,0 +1,11 @@
+-main DocsGenerator
+
+-lib dox
+-lib hxtemplo
+-lib markdown
+-lib hxargs
+
+-D no-deprecation-warnings
+-D message.reporting=pretty
+
+--interp
