@@ -31,10 +31,10 @@ jobs:
       - name: Install haxelibs
         working-directory: ALE-Psych
         run: |
-          haxelib --global git hmm https://github.com/ALE-Psych-Crew/hmm
-          haxelib --global run hmm setup
-          haxelib --global run hmm install
-          haxelib --global install dox
+          haxelib git hmm https://github.com/ALE-Psych-Crew/hmm
+          haxelib run hmm setup
+          haxelib run hmm install
+          haxelib install dox
 
       - name: Clone XML Generator
         run: |
