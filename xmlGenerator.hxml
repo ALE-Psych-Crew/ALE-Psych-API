@@ -6,6 +6,7 @@
 --macro core.macros.TypedefsMacro.init()
 --macro core.macros.ExtensibleMacro.init()
 
+-lib dox
 -lib flixel
 -lib flixel-addons
 -lib flixel-animate
