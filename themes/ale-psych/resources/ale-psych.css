@@ -1,0 +1,100 @@
+:root {
+  --ale-bg: #11131a;
+  --ale-panel: #181b24;
+  --ale-panel-soft: #202432;
+  --ale-text: #f4f7ff;
+  --ale-muted: #a8b0c5;
+  --ale-primary: #b986ff;
+  --ale-accent: #7d5cff;
+  --ale-warn: #ffcf5a;
+  --ale-border: rgba(244, 247, 255, 0.14);
+}
+
+body {
+  background: var(--ale-bg);
+  color: var(--ale-text);
+}
+
+a,
+a:visited {
+  color: var(--ale-accent);
+}
+
+a:hover,
+a:focus {
+  color: var(--ale-warn);
+}
+
+header,
+.header,
+.topbar,
+.navbar,
+.nav {
+  background: var(--ale-panel);
+  border-color: var(--ale-border);
+}
+
+.content,
+.main,
+main,
+article {
+  background: transparent;
+}
+
+.sidebar,
+.menu,
+.package-list,
+.type-list,
+.search,
+.search-results {
+  background: var(--ale-panel);
+  border-color: var(--ale-border);
+}
+
+.class,
+.interface,
+.enum,
+.typedef,
+.abstract,
+.field,
+.method,
+.property,
+.constructor,
+pre,
+code {
+  border-color: var(--ale-border);
+}
+
+pre,
+code {
+  background: var(--ale-panel-soft);
+  color: var(--ale-text);
+}
+
+input,
+select,
+textarea {
+  background: var(--ale-panel-soft);
+  border: 1px solid var(--ale-border);
+  color: var(--ale-text);
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: var(--ale-accent);
+  outline: 2px solid rgba(54, 214, 199, 0.25);
+}
+
+.deprecated,
+.warning {
+  color: var(--ale-warn);
+}
+
+.platform,
+.meta,
+.type-path,
+.module,
+.package {
+  color: var(--ale-muted);
+}

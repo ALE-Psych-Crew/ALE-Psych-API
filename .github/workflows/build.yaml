@@ -36,6 +36,9 @@ jobs:
           haxelib --global run hmm install
           haxelib --global install dox
           haxelib install dox
+          haxelib install hxtemplo
+          haxelib install markdown
+          haxelib install hxargs
 
       - name: Clone XML Generator
         run: |
@@ -48,7 +51,7 @@ jobs:
 
       - name: Generate Pages
         run: |
-          haxelib run dox -i ALE-Psych/docs.xml -o docs
+          haxe pagesGenerator.hxml
 
       - name: Upload Pages Artifact
         uses: actions/upload-pages-artifact@v3

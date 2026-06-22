@@ -1,3 +1,3 @@
 cd ALE-Psych
-haxe ../docsGenerator.hxml
+haxe ../xmlGenerator.hxml
 cd ..

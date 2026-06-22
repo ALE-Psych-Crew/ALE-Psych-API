@@ -1,0 +1,8 @@
+{
+  "name": "ALE Psych Theme",
+  "author": "ALE Psych Crew",
+  "parentTheme": "default",
+  "headerIncludes": [
+    "ale-psych.css"
+  ]
+}
