@@ -37,14 +37,12 @@ jobs:
           haxelib --global install dox
           haxelib install dox
 
-      - name: Clone XML Generator
-        run: |
-          copy xmlGenerator.hxml ALE-Psych/xmlGenerator.hxml
-
       - name: Generate XML
         working-directory: ALE-Psych
         run: |
-          haxe xmlGenerator.hxml
+          haxelib run lime display windows | Out-File -Encoding ascii docsGenerator.hxml
+          Add-Content docsGenerator.hxml "-xml docs.xml"
+          haxe docsGenerator.hxml
 
       - name: Generate Pages
         run: |

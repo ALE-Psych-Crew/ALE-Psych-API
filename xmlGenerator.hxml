@@ -1,41 +1,34 @@
 -cp source
 
 --macro flixel.system.macros.FlxDefines.run()
---macro core.macros.FieldsMacro.init()
---macro core.macros.ImportsMacro.init()
---macro core.macros.TypedefsMacro.init()
---macro core.macros.ExtensibleMacro.init()
+--macro core.macros.ImportsMacro.include()
 
 -lib dox
+-lib jsonmod
+-lib away3d
 -lib flixel
+-lib flixel-ui
 -lib flixel-addons
 -lib flixel-animate
 -lib flxsoundfilters
--lib hxvlc
--lib sl-windows-api
--lib hxluajit
--lib hxluajit-wrapper
+-lib flixel-away3d
+-lib tink_core
+-lib grig.audio
+-lib funkin.vis
 -lib rulescript
 -lib ale-ui
--lib ale-json
 -lib ale-rulescript-wrapper
 
 -main core.Main
 
--D ALLOW_HSCRIPT
--D ALLOW_LUA
--D ALLOW_CRASH_HANDLER
--D ALLOW_VIDEOS
--D ALLOW_WINDOWS_API
--D ALLOW_MOBILE_API
--D ALLOW_ALL_CLASSES
--D HX_WINDOWS
+-D HSCRIPT_ALLOWED
+-D CRASH_HANDLER
+-D COMPILE_ALL_CLASSES
+-D desktop
 
 -D hscriptPos
 -D lime_disable_assets_version
 -D FLX_NO_FOCUS_LOST_SCREEN
--D FLX_NO_SOUND_TRAY
--D FLX_NO_HEALTH
 -D FLX_NO_DEBUG
 
 -D no-deprecation-warnings
@@ -43,4 +36,4 @@
 
 --no-output
 -xml docs.xml
--cpp _
+-neko _
