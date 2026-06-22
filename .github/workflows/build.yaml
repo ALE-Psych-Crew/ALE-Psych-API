@@ -35,9 +35,6 @@ jobs:
           haxelib --global run hmm setup
           haxelib --global run hmm install
           haxelib --global install dox
-          haxelib --global install hxtemplo
-          haxelib --global install markdown
-          haxelib --global install hxargs
           haxelib install dox
 
       - name: Clone XML Generator
@@ -51,7 +48,7 @@ jobs:
 
       - name: Generate Pages
         run: |
-          haxe pagesGenerator.hxml
+          haxelib run dox -i ALE-Psych/docs.xml -o docs -theme themes/ale-psych --title "ALE Psych API" -D themeColor 0xB986FF -D textColor 0xF4F7FF -D website https://github.com/ALE-Psych-Crew/ALE-Psych -D description "API documentation for ALE Psych." -D source-path https://github.com/ALE-Psych-Crew/ALE-Psych/blob/main/source/
 
       - name: Upload Pages Artifact
         uses: actions/upload-pages-artifact@v3
