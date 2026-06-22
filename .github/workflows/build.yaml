@@ -35,10 +35,10 @@ jobs:
           haxelib --global run hmm setup
           haxelib --global run hmm install
           haxelib --global install dox
+          haxelib --global install hxtemplo
+          haxelib --global install markdown
+          haxelib --global install hxargs
           haxelib install dox
-          haxelib install hxtemplo
-          haxelib install markdown
-          haxelib install hxargs
 
       - name: Clone XML Generator
         run: |
