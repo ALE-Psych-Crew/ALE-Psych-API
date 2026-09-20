@@ -1,7 +1,6 @@
 -cp source
 
---macro flixel.system.macros.FlxDefines.run()
---macro core.macros.ImportsMacro.include()
+--macro core.macros.Macros.init()
 
 -lib dox
 -lib jsonmod
@@ -18,21 +17,56 @@
 -lib rulescript
 -lib ale-ui
 -lib ale-rulescript-wrapper
+-lib foxlite
+-lib hxdiscord_rpc
+-lib hxgamemode
+-lib hxvlc
+-lib rulescript
+-lib ale-rulescript-wrapper
+-lib ale-foxlite-wrapper
+-lib ale-hscript
+-lib hxluajit
+-lib hxluajit-wrapper
+-lib jsonmod
+-lib ale-ui
+-lib extension-androidtools
+-lib extension-orientation
 
 -main core.Main
 
--D HSCRIPT_ALLOWED
--D CRASH_HANDLER
--D COMPILE_ALL_CLASSES
--D desktop
+-D ALLOW_HSCRIPT
+-D ALLOW_LUA
+-D ALLOW_CRASH_HANDLER
+-D ALLOW_DISCORD
+-D ALLOW_VIDEOS
+-D ALLOW_LINUX_API
+-D ALLOW_WINDOWS_API
+-D ALLOW_MOBILE_API
+-D ALLOW_ALL_CLASSES
+-D FORCE_TOUCH
 
+-D HX_WINDOWS
+
+-D DISCORD_DISABLE_IO_THREAD
 -D hscriptPos
 -D lime_disable_assets_version
+-D FLX_NO_TOUCH
 -D FLX_NO_FOCUS_LOST_SCREEN
+-D FLX_NO_SOUND_TRAY
+-D FLX_NO_HEALTH
 -D FLX_NO_DEBUG
+
+-D HXCPP_CHECK_POINTER
+-D HXCPP_STACK_LINE
+-D HXCPP_STACK_TRACE
+-D HXCPP_GC_BIG_BLOCKS
+-D HXCPP_DEBUG_LINK
+-D HXCPP_CATCH_SEGV
 
 -D no-deprecation-warnings
 -D message.reporting=pretty
+
+-dce no
 
 --no-output
 -xml docs.xml
