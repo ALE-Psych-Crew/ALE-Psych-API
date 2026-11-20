@@ -16,13 +16,10 @@
 -lib funkin.vis
 -lib rulescript
 -lib ale-ui
--lib ale-rulescript-wrapper
 -lib foxlite
 -lib hxdiscord_rpc
 -lib hxgamemode
 -lib hxvlc
--lib rulescript
--lib ale-rulescript-wrapper
 -lib ale-foxlite-wrapper
 -lib ale-hscript
 -lib hxluajit
@@ -34,7 +31,6 @@
 
 -main core.Main
 
--D ALLOW_HSCRIPT
 -D ALLOW_LUA
 -D ALLOW_CRASH_HANDLER
 -D ALLOW_DISCORD
@@ -48,7 +44,6 @@
 -D HX_WINDOWS
 
 -D DISCORD_DISABLE_IO_THREAD
--D hscriptPos
 -D lime_disable_assets_version
 -D FLX_NO_TOUCH
 -D FLX_NO_FOCUS_LOST_SCREEN
