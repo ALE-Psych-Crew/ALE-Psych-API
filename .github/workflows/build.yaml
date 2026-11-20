@@ -34,9 +34,9 @@ jobs:
           haxelib --global git hmm https://github.com/ALE-Psych-Crew/hmm
           haxelib --global run hmm setup
           haxelib --global run hmm install
-          haxelib --global install hxcpp
           haxelib --global install dox
           haxelib --global run libhxcpp setup
+          haxelib run libhxcpp setup
           haxelib install dox
 
       - name: Generate XML
